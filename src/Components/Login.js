@@ -1,12 +1,13 @@
 import { Container, Form } from "react-bootstrap";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Api from "./Api";
 import { useState } from "react";
 import Swal from "sweetalert2";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const Navigate = useNavigate();
   console.log(Api?.Email);
   console.log(Api?.Password);
   return (
@@ -15,6 +16,8 @@ function Login() {
         width: "45pc",
         margin: "5vh",
         padding: "5vh",
+        position: "relative",
+        left: "20pc",
       }}
     >
       <div>
@@ -81,8 +84,12 @@ function Login() {
             </p>
           </div>
           <div className="mt-2">
-            <Link className="text-decoration-none" to={"ForgetPassword"}>
-              Forget Your Password?
+            <Link
+              className="text-decoration-none"
+              to={"ForgetPassword"}
+              id="CreateNew"
+            >
+              Create New Account?
             </Link>
           </div>
           <div
@@ -131,6 +138,8 @@ function Login() {
                 setTimeout(() => {
                   document.getElementById("ErrorPass1").style.display = "none";
                 }, 2000);
+              } else {
+                Navigate("/Add Number");
               }
             }}
           >

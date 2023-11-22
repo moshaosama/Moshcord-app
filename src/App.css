@@ -4,14 +4,46 @@
   background-color: black;
   color: white;
 }
+#CreateNew:hover {
+  text-decoration: underline !important;
+}
+.Img1 {
+  width: 39px;
+  border-radius: 30px;
+  margin-right: 10px;
+  float: left;
+}
+.Img2 {
+  width: 50px;
+  border-radius: 30px;
+  margin-right: 10px;
+  float: left;
+}
 
 @media all and (max-width: 433px) {
   .container {
     width: 87% !important;
-    position: relative;
-    right: 1pc;
+    position: relative !important;
+    left: -1pc !important;
   }
   input {
     width: 20pc !important;
+  }
+  #NavbarChats {
+    height: 4.2pc !important;
+    width: 27pc !important;
+  }
+  #Chats {
+    position: absolute !important;
+    left: 0pc !important;
+    top: 69px !important;
+    width: 27pc !important;
+    height: 39.2pc !important;
+  }
+  #Scroll {
+    height: 34pc !important;
+  }
+  #Send {
+    left: 22pc !important;
   }
 }

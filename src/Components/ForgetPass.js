@@ -20,6 +20,8 @@ function ForgetPass() {
         width: "45pc",
         margin: "5vh",
         padding: "5vh",
+        position: "relative",
+        left: "20pc",
       }}
     >
       <div>
